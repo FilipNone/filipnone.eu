@@ -24,3 +24,10 @@ Before working on this project, read and follow these files:
 - Run the required checks before declaring a change done: `cargo test`, `cargo fmt --check`, `cargo clippy -- -D warnings`, `cargo build --release`.
 - Stop before destructive actions. Ask before deleting, force-pushing, or rewriting history.
 - Verify dependency versions on crates.io before adding them. Do not trust LLM memory.
+
+## Git configuration
+
+- Remote uses SSH: `git@github.com:FilipNone/filipnone.eu.git`.
+- Commit author email MUST be the GitHub noreply address:
+  `165696124+FilipNone@users.noreply.github.com`.
+- Do NOT use the private email `filipnone@ik.me` (GitHub rejects it with error GH007).

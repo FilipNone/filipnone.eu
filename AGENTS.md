@@ -7,6 +7,15 @@ define the project, build guardrails, work in small phases, and stop at manual g
 Repository: https://github.com/FilipNone/filipnone.eu
 Created: 2026-08-08
 
+## 0. Git Configuration
+
+- Remote uses SSH: `git@github.com:FilipNone/filipnone.eu.git`.
+- Commit author email MUST be the GitHub noreply address:
+  `165696124+FilipNone@users.noreply.github.com`.
+- Do NOT use the private email `filipnone@ik.me`. GitHub rejects pushes that
+  publish a private email (error GH007).
+- Set it with: `git config user.email "165696124+FilipNone@users.noreply.github.com"`.
+
 ## 1. Global Working Rules (apply everywhere)
 
 - Keep changes focused and small. One reviewable change per pull request.
