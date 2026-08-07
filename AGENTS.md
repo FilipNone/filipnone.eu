@@ -12,8 +12,7 @@ Created: 2026-08-08
 - Remote uses SSH: `git@github.com:FilipNone/filipnone.eu.git`.
 - Commit author email MUST be the GitHub noreply address:
   `165696124+FilipNone@users.noreply.github.com`.
-- Do NOT use the private email `filipnone@ik.me`. GitHub rejects pushes that
-  publish a private email (error GH007).
+- Do NOT use the private email.
 - Set it with: `git config user.email "165696124+FilipNone@users.noreply.github.com"`.
 
 ## 1. Global Working Rules (apply everywhere)
@@ -30,7 +29,7 @@ Created: 2026-08-08
 
 These rules apply to ALL generated text, code, comments, and documentation:
 
-- Do NOT use the em dash character `-` (U+2014). Use a hyphen, comma, or restructure the sentence.
+- Do NOT use the em dash character `—` (U+2014). Use a hyphen, comma, or restructure the sentence.
 - Do NOT use emojis or other non-ASCII decorative symbols (checkmarks, crosses, warning signs, bullets, radio/checkbox glyphs, etc.).
 - Use plain ASCII equivalents instead: `[x]`, `(off)`, `Yes`/`No`, `*`, `o`, `-`.
 - Keep messages concise and impersonal.
@@ -62,6 +61,29 @@ Rust is production-ready for the web. Verified current versions (2026-08-08):
 
 IMPORTANT: Always verify current versions on crates.io before adding a dependency.
 Do not trust the version an LLM remembers from training data. Pin exact versions in `Cargo.toml`.
+
+## 4b. Local Documentation (check first)
+
+Documentation for the Rust toolchain and the crates used in this project is
+downloaded locally in the `docs/` folder. Before consulting the web, search
+these local files first. They are plain-text markdown and are faster and more
+reliable than fetching web pages.
+
+- `docs/rust-book/` - The Rust Book (language fundamentals, ownership, error handling).
+- `docs/cargo-book/` - The Cargo Book (dependencies, features, profiles, workspaces, commands).
+- `docs/rust-reference/` - The Rust Reference (precise language semantics).
+- `docs/axum/` - axum web framework READMEs.
+- `docs/tokio/` - tokio async runtime README and docs.
+- `docs/serde/` - serde serialization README.
+- `docs/askama/` - askama templating book.
+- `docs/tower/` - tower middleware guides.
+- `docs/tower-http/` - tower-http middleware README.
+- `docs/tracing/` - tracing logging README.
+- `docs/reqwest/` - reqwest HTTP client README.
+- `docs/sqlx/` - sqlx database README.
+
+Use `grep` or `file_search` to find the relevant topic in these files before
+going online. Only fetch the web when the local docs do not cover the topic.
 
 ## 5. Test and Validation Harness (build before features)
 
@@ -138,5 +160,6 @@ AI makes each step faster. It does not get to skip any of them.
 - `ROADMAP.md` - phases with exit criteria.
 - `TASKS.md` - small jobs inside the current phase.
 - `copilot-instructions.md` - global LLM writing rules.
+- `docs/` - local documentation (Rust Book, Cargo Book, Reference, crate docs).
 - `Cargo.toml` - pinned dependencies.
 - `src/` - Rust source code.
