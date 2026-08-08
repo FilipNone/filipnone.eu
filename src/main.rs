@@ -1,6 +1,7 @@
 use std::net::SocketAddr;
 
 use filipnone_eu::config::Config;
+use filipnone_eu::state::AppState;
 use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
 
 #[tokio::main]
@@ -14,7 +15,10 @@ async fn main() {
         .init();
 
     let config = Config::from_env();
-    let app = filipnone_eu::app();
+    let state = AppState {
+        domain: config.domain.into(),
+    };
+    let app = filipnone_eu::app(state);
 
     let addr = SocketAddr::from(([127, 0, 0, 1], config.port));
     tracing::info!("listening on {addr}");

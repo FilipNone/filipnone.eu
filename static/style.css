@@ -80,6 +80,20 @@ body {
     font-size: 0.875rem;
 }
 
+.panel-link {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.panel-link a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.panel-link a:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 600px) {
     .hero h1 {
         font-size: 1.75rem;

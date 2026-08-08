@@ -2,6 +2,8 @@
 pub struct Config {
     /// Port the server listens on.
     pub port: u16,
+    /// Public domain the site is served under.
+    pub domain: String,
 }
 
 impl Config {
@@ -11,6 +13,7 @@ impl Config {
             .ok()
             .and_then(|p| p.parse().ok())
             .unwrap_or(3000);
-        Self { port }
+        let domain = std::env::var("DOMAIN").unwrap_or_else(|_| "localhost".to_string());
+        Self { port, domain }
     }
 }
