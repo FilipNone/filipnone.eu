@@ -1,1 +1,12 @@
-docs/
+# Build artifacts
+/target/
+
+# Local documentation (downloaded, not part of the repo)
+/docs/
+
+# Local planning and agent docs (kept out of version control)
+/AGENTS.md
+/SPEC.md
+/ROADMAP.md
+/TASKS.md
+/copilot-instructions.md

@@ -1,0 +1,2 @@
+# Clippy configuration
+# Treat all warnings as errors in CI via the command line flag.

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}{{ domain }} - Home{% endblock title %}
+
+{% block content %}
+<section class="hero">
+    <h1>Hello, I am Filip.</h1>
+    <p class="tagline">A self-hosted web platform built with Rust.</p>
+</section>
+
+<section class="cards">
+    <article class="card">
+        <h2>Portfolio</h2>
+        <p>Projects and work, coming soon.</p>
+    </article>
+    <article class="card">
+        <h2>Server status</h2>
+        <p>A live teaser of this server, coming soon.</p>
+    </article>
+    <article class="card">
+        <h2>Services</h2>
+        <p>Links to the tools I run, coming soon.</p>
+    </article>
+</section>
+
+<p class="panel-link"><a href="/panel">Admin panel</a></p>
+{% endblock content %}
